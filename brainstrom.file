@@ -1,0 +1,67 @@
+Toko Jaya Abadi
+|- Clinic 1
+   |- Fasilitas Tetap
+      |- Medical Checkup
+      |- Test Lab
+      |- Test Covid
+   |- Fasilitas Lain
+|- Clinic 2
+   |- Fasilitas Tetap
+      |- Medical Checkup
+      |- Test Lab
+      |- Test Covid
+   |- Fasilitas Lain
+|- Clinic 3
+   |- Fasilitas Tetap
+      |- Medical Checkup
+      |- Test Lab
+      |- Test Covid
+   |- Fasilitas Lain
+|- Clinic ..
+   |- Fasilitas Tetap
+      |- Medical Checkup
+      |- Test Lab
+      |- Test Covid
+   |- Fasilitas Lain
+
+Entitas Besar
+|- Clinic
+   |- Clinic >< Fasilitas = M:M
+|- Fasilitas
+   |- Fasilitas >< Clinic = M:M
+
+Tabel
+|- CLINIC
+| id - nama - address - contact|
+| 1 - Clinic Sukajadi |
+| 2 - Clinic Mangga |
+
+|- FASILITAS
+| id - fasilitas |
+| A - Test Lab |
+| B - MCU |
+| C - Covid-19 |
+
+|- LAYANAN
+| id - nama - id_fasil |
+| 001 - Hemodialisa - A |
+| 002 - Paket Gold - B |
+| 003 - Rapid Test - C |
+
+|- LAYANAN_CLINIC
+| id - id_layanan - id_clinic |
+| 0011 - 001 - 1 |
+| 0012 - 001 - 2 |
+| 0022 - 002 - 2 |
+
+|- FASILITAS_CLINIC
+| id - id_fasil - id_clinic |
+| A1 - A - 1 |
+| A2 - A - 2 |
+| B1 - B - 2 |
+
+|- DETAIL LAYANAN
+| id - date - id_layanan_clinic - id_fasil_clinic|
+| 0011A1 25/09/2022 0011 A1 |
+| 0012A1 25/09/2022 0012 A1 |
+| 0011A2 25/09/2022 0011 A2 |
