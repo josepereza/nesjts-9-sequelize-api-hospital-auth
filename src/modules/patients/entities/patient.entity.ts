@@ -38,6 +38,5 @@ export class Patient extends Model<Patient> {
   clinic: Clinic;
 
   @BelongsToMany(() => Doctor, () => PatientDoctor)
-  doctors: Array<Doctor & { PatientDoctor: PatientDoctor }>;
-  // doctors: Doctor[];
+  doctors: Doctor[];
 }
